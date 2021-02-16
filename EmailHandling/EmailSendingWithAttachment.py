@@ -11,7 +11,7 @@ with open("EmailText.txt") as myfile:
     msg.set_content(data)
 
 with smtplib.SMTP_SSL("smtp.gmail.com",465) as server:# same for all
-    server.login("vandunaik04@gmail.com","Vandita@1104")
+    server.login("Your Email Id","Password")
     server.send_message(msg)
 
 print("Email has been sent")
