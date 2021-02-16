@@ -1,3 +1,4 @@
+#This is first method. You can use either one
 # import smtplib
 # from email.message import EmailMessage
 # msg=EmailMessage()
@@ -13,6 +14,6 @@
 
 import smtplib
 server=smtplib.SMTP_SSL("smtp.gmail.com",465) # same for all
-server.login("vandunaik04@gmail.com","Vandita@1104")
-server.sendmail("vandunaik04@gmail.com", "vandunaik04@gmail.com", "hi how are u")
+server.login("Your email Id","Your password")
+server.sendmail("vandunaik04@gmail.com", "vandunaik04@gmail.com", "Write some message")
 server.quit()
