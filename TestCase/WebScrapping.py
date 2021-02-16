@@ -21,9 +21,9 @@ action.move_to_element(sign_in_box).perform()
 time.sleep(3)
 sign_in_btn=driver.find_element_by_xpath("//*[@id='nav-flyout-ya-signin']/a/span")
 sign_in_btn.click()
-driver.find_element_by_id("ap_email").send_keys("+919902678139")
+driver.find_element_by_id("ap_email").send_keys("Type your UserID")
 driver.find_element_by_id("continue").click()
-driver.find_element_by_id("ap_password").send_keys("Vandita@1992")
+driver.find_element_by_id("ap_password").send_keys("Type your password")
 driver.find_element_by_id("signInSubmit").click()
 
 #mobiles
@@ -65,11 +65,13 @@ msg['From']="vandunaik04@gmail.com"
 msg['To']="vandunaik04@gmail.com"
 msg.set_content("This is for practice purpose")
 
+#Email
 time.sleep(4)
 with open('C:\\Users\\Automation Projects\\Amazon_Web_Scrapping\\EmailHandling\\EmailTemplate.txt') as myfile:
     data=myfile.read()
     msg.set_content(data)
-
+    
+#excel File
 with open("C:\\Users\\Automation Projects\\Amazon_Web_Scrapping\\Reports\\FinalRecords.xlsx","rb") as f:
     file_data=f.read()
     file_name=f.name
@@ -77,7 +79,7 @@ with open("C:\\Users\\Automation Projects\\Amazon_Web_Scrapping\\Reports\\FinalR
 
 
 with smtplib.SMTP_SSL("smtp.gmail.com",465) as server:  # same for all
-    server.login("vandunaik04@gmail.com","Vandita@1104")
+    server.login("Your Email Id","Your password")
     server.send_message(msg)
 
 time.sleep(20)
